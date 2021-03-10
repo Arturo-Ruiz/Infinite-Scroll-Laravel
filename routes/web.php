@@ -21,8 +21,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users_index');
-
 Route::get('/users/pagination', [App\Http\Controllers\UsersController::class, 'pagination'])->name('users_pagination');
 
 

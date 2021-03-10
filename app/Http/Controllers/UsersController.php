@@ -8,7 +8,7 @@ class UsersController extends Controller
 {
 
     public function index(){
-
+        
     }
 
     public function pagination(){
