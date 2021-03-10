@@ -9,4 +9,13 @@
         <h1>Loading...</h1>
     </div>
 </div>
+<script>
+    let users = 2;
+    const loading = document.getElementById('loading');
+
+    window.onscroll = ()=>{
+        alert('hiciste scroll')
+    }
+
+</script>
 @endsection
