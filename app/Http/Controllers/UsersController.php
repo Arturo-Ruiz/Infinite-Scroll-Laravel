@@ -11,8 +11,8 @@ class UsersController extends Controller
     public function pagination(){
 
         $users = User::paginate(50);
-        return view('home', compact('users'));
-        
+        return view('users.pagination', compact('users'));
+                
     }
 
 }
