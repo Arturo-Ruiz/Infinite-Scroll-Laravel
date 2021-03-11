@@ -14,7 +14,19 @@
     const loading = document.getElementById('loading');
 
     window.onscroll = ()=>{
-        alert('hiciste scroll')
+        loading.removeAttribute('hidden')
+        if((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight ){
+            fetch(`/users/pagination?page=${users}`,{
+                method:'get'
+            })
+            .then(response => response.text() )
+            .then(html => {
+                loading.setAttribute('hidden','')
+                document.getElementById("container").innerHTML += html
+                users++;                
+            })
+            .catch(error => console.log(error))
+        }
     }
 
 </script>

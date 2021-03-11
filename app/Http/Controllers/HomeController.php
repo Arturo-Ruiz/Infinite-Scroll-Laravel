@@ -26,6 +26,6 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::paginate(50);
-        return view('home', compact('users'));
+        return view('users.pagination', compact('users'));
     }
 }
